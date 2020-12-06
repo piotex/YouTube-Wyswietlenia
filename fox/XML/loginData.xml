@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<YouTubeUser_List>
+  <YouTubeUser>
+    <Id>12</Id>
+    <Login>piotex</Login>
+    <Pwd>1234</Pwd>
+  </YouTubeUser>
+  <YouTubeUser>
+    <Id>3</Id>
+    <Login>adam</Login>
+    <Pwd>qwerty</Pwd>
+  </YouTubeUser>
+</YouTubeUser_List>

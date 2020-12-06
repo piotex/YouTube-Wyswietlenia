@@ -1,0 +1,45 @@
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\fox.exe.config
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\fox.exe
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\fox.pdb
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\Geckofx-Core.dll
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\Geckofx-Winforms.dll
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\Geckofx-Core.pdb
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\bin\Debug\Geckofx-Winforms.pdb
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.Properties.Resources.resources
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.csproj.GenerateResource.cache
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.csproj.CoreCompileInputs.cache
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.csproj.CopyComplete
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.exe
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.pdb
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.Form1.resources
+C:\Users\pkubo\OneDrive\Desktop\fox\fox\obj\Debug\fox.csprojAssemblyReference.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\fox.exe.config
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\fox.exe
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\fox.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\Geckofx-Core.dll
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\Geckofx-Winforms.dll
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\Geckofx-Core.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\bin\Debug\Geckofx-Winforms.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.csprojAssemblyReference.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.Form1.resources
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.Properties.Resources.resources
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.csproj.GenerateResource.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.csproj.CoreCompileInputs.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.csproj.CopyComplete
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.exe
+C:\Users\pkubo\OneDrive\Desktop\YouTube Master\fox\obj\Debug\fox.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\fox.exe.config
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\fox.exe
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\fox.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\Geckofx-Core.dll
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\Geckofx-Winforms.dll
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\Geckofx-Core.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\bin\Debug\Geckofx-Winforms.pdb
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.csprojAssemblyReference.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.Form1.resources
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.Properties.Resources.resources
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.csproj.GenerateResource.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.csproj.CoreCompileInputs.cache
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.csproj.CopyComplete
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.exe
+C:\Users\pkubo\OneDrive\Desktop\YouTubeMaster\fox\obj\Debug\fox.pdb
