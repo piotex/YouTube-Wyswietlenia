@@ -39,7 +39,8 @@ namespace YT_Master
             int time_my = getRandomNumberOfSeconds();
             int time_other = getRandomNumberOfSeconds();
 
-            Console.WriteLine("Other_time: "+   (time_other/60).ToString()+" min");
+            Console.WriteLine(DateTime.Now + " ------------------------------");
+            Console.WriteLine("Other_time: " +   (time_other/60).ToString()+" min");
             Console.WriteLine("My_time:    " +  (time_my/60).ToString()   +" min");
 
             Work_tmp(time_other, url_other);
