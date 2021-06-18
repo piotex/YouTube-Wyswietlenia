@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Threading;
@@ -10,37 +12,41 @@ namespace YT_Master
     {
         static void Main(string[] args)
         {
-            /*
-            int time_to_live_s = getRandomNumberOfSeconds();
-            Console.WriteLine("YT_Master! \nLiving time: " + time_to_live_s.ToString());
-            */
-
-            Task.Factory.StartNew(() => new SlaveList().Watch());
-
-
+            rec_funck();
             Console.WriteLine("\n\n---Waiting For [Enter] To Break---\n\n");
             Console.ReadLine();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        static int getRandomNumberOfSeconds()
+        static void rec_funck()
         {
-            int min_time_s = 1 * 60;
-            //int max_time_s = 45 * 60;
-            int max_time_s = 1 * 60;
-            return new Random().Next(min_time_s, max_time_s);
+            try
+            {
+                Console.WriteLine("\n\n---Here we are again xD---\n\n");
+
+                Task.Factory.StartNew(() => new SlaveLink().Watch());
+                Task.Factory.StartNew(() => new SlaveList().Watch());
+            }
+            catch (Exception exx)
+            {
+                Console.WriteLine("Error: "+exx.Message);
+                //process.Kill();
+                kill_firefox();
+                rec_funck();
+            }
         }
-        */
+        static void kill_firefox()
+        {
+            Process[] AllProcesses = Process.GetProcesses();
+            foreach (var process in AllProcesses)
+            {
+                if (process.MainWindowTitle != "")
+                {
+                    string s = process.ProcessName.ToLower();
+                    if (s == "firefox")                                                //  s == "iexplore" || s == "iexplorer" || s == "chrome" ||
+                        process.Kill();
+                }
+            }
+        }
+
     }
 }

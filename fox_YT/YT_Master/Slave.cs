@@ -9,8 +9,6 @@ namespace YT_Master
     public class Slave
     {
         //C:\Users\Piotr\Documents\GitHub\YouTubeMaster\fox_YT\YT_Master\URL_List.xml
-        private string URL_path_List = @"..\..\..\URL_List.xml";
-        private string URL_path_Link = @"..\..\..\URL_Link.xml";
 
         protected FirefoxWatcher watcher;
         //protected string parameters;
@@ -19,20 +17,17 @@ namespace YT_Master
 
         public string PatchToExe;
 
-        public int getRandomNumberOfSeconds()
+        public int getRandomNumberOfSeconds(int min_time_s = 1*60, int max_time_s = 45*60)
         {
-            int min_time_s = 1 * 60;
-            int max_time_s = 45 * 60;
-            //int max_time_s = 1 * 60;
             return new Random().Next(min_time_s, max_time_s);
         }
 
         //todo - zamienic typ na Dictionary<enum,string>
-        public List<List<string>> get_url()
+        public List<List<string>> get_url(string path)
         {
             List<List<string>> tmp = new List<List<string>>();
             XmlDocument doc = new XmlDocument();
-            doc.Load(URL_path_List);
+            doc.Load(path);
 
             for (int i = 0; i < doc.DocumentElement.ChildNodes.Count; i++)
             {
