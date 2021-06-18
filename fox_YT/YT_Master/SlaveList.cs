@@ -24,8 +24,8 @@ namespace YT_Master
             watcher.Navigate(url_error);
             watcher.ClickButton_ZgadzamSie();
 
-            url_my = url_list[0][0];
-            url_other = url_list[1][0];
+            url_other = url_list[0][0];
+            url_my    = url_list[1][0];
         }
         public void Watch()
         {

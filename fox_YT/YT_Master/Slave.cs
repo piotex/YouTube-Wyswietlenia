@@ -8,8 +8,9 @@ namespace YT_Master
 {
     public class Slave
     {
-        private string URL_path_List = @"C:\Users\pkubo\OneDrive\Desktop\fox_YT\YT_Master\URL_List.xml";
-        private string URL_path_Link = @"C:\Users\pkubo\OneDrive\Desktop\fox_YT\YT_Master\URL_Link.xml";
+        //C:\Users\Piotr\Documents\GitHub\YouTubeMaster\fox_YT\YT_Master\URL_List.xml
+        private string URL_path_List = @"..\..\..\URL_List.xml";
+        private string URL_path_Link = @"..\..\..\URL_Link.xml";
 
         protected FirefoxWatcher watcher;
         //protected string parameters;

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pkubo\\OneDrive\\Desktop\\fox_YT\\YT_Master\\YT_Master.csproj": {}
+    "C:\\Users\\Piotr\\Documents\\GitHub\\YouTubeMaster\\fox_YT\\YT_Master\\YT_Master.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pkubo\\OneDrive\\Desktop\\fox_YT\\YT_Master\\YT_Master.csproj": {
+    "C:\\Users\\Piotr\\Documents\\GitHub\\YouTubeMaster\\fox_YT\\YT_Master\\YT_Master.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pkubo\\OneDrive\\Desktop\\fox_YT\\YT_Master\\YT_Master.csproj",
+        "projectUniqueName": "C:\\Users\\Piotr\\Documents\\GitHub\\YouTubeMaster\\fox_YT\\YT_Master\\YT_Master.csproj",
         "projectName": "YT_Master",
-        "projectPath": "C:\\Users\\pkubo\\OneDrive\\Desktop\\fox_YT\\YT_Master\\YT_Master.csproj",
-        "packagesPath": "C:\\Users\\pkubo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pkubo\\OneDrive\\Desktop\\fox_YT\\YT_Master\\obj\\",
+        "projectPath": "C:\\Users\\Piotr\\Documents\\GitHub\\YouTubeMaster\\fox_YT\\YT_Master\\YT_Master.csproj",
+        "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Piotr\\Documents\\GitHub\\YouTubeMaster\\fox_YT\\YT_Master\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pkubo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,12 +59,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.12, 3.1.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
