@@ -8,7 +8,7 @@ namespace YT_Master
 {
     public class FirefoxDriver_inter
     {
-        protected FirefoxDriver driver;
+        public FirefoxDriver driver;
         public FirefoxDriver_inter()
         {
             FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(".", "geckodriver.exe");

@@ -28,8 +28,9 @@ namespace YT_Master
             }
             catch (Exception exx)
             {
+                Console.WriteLine("*\n*\n*\n*\n*\n");
                 Console.WriteLine("Error: "+exx.Message);
-                //process.Kill();
+                Console.WriteLine("*\n*\n*\n*\n*\n");
                 kill_firefox();
                 rec_funck();
             }

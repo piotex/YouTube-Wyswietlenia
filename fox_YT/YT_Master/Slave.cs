@@ -8,12 +8,10 @@ namespace YT_Master
 {
     public class Slave
     {
-        //C:\Users\Piotr\Documents\GitHub\YouTubeMaster\fox_YT\YT_Master\URL_List.xml
+        private string url_error = @"https://www.youtube.com/watch?v=5BZLz21ZS_Y";    // initial - error
+        private int ms_to_sec = 1000;
 
         protected FirefoxWatcher watcher;
-        //protected string parameters;
-        //protected System.Diagnostics.Process process;
-        //--------------------------------------------------------------//
 
         public string PatchToExe;
 
@@ -41,42 +39,17 @@ namespace YT_Master
             }
             return tmp;
         }
-
-
-
-
-        /*
-        public virtual void Work(int time_to_live_s)
+        public void Work_tmp(int time, string url)
         {
-            Start();
-            Thread.Sleep(time_to_live_s * 1000);
-            Stop();
+            watcher.Navigate(url);
+            watcher.ClickButton_PlayVideo();
+            Thread.Sleep(time * ms_to_sec);
         }
-        public virtual void Start()
+        public void Init()
         {
-            Console.WriteLine("_Start: Slave: " + PatchToExe);
-            process = System.Diagnostics.Process.Start(PatchToExe, parameters);
+            watcher = new FirefoxWatcher();
+            watcher.Navigate(url_error);
+            watcher.ClickButton_ZgadzamSie();
         }
-
-        public virtual void Stop()
-        {
-            Console.WriteLine("_Stop Processes");
-
-            process.Kill();
-
-            Process[] AllProcesses = Process.GetProcesses();
-            foreach (var process in AllProcesses)
-            {
-                if (process.MainWindowTitle != "")
-                {
-                    string s = process.ProcessName.ToLower();
-                    if ( s == "firefox")                                                //  s == "iexplore" || s == "iexplorer" || s == "chrome" ||
-                        process.Kill();
-                }
-            }
-        }
-        */
-
-
     }
 }
