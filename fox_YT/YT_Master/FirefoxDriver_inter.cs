@@ -48,5 +48,25 @@ namespace YT_Master
             }
             return true;
         }
+        public bool ClickButton_PersonalizacjaCookies()
+        {
+            try
+            {
+                var lista_ustawien = driver.FindElementsByTagName("button");
+                lista_ustawien[0].Click();          //wyl wszystko
+                lista_ustawien[2].Click();
+                lista_ustawien[4].Click();
+                lista_ustawien[5].Click();
+                lista_ustawien[7].Click();
+                lista_ustawien[9].Click();
+                driver.FindElementByClassName("AjY5Oe").Click();
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
+            }
+            catch (Exception exx)
+            {
+                PlotError("Error in ClickButton_ZgadzamSie " + exx.Message);
+            }
+            return true;
+        }
     }
 }

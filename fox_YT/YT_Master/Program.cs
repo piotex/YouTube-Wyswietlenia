@@ -23,7 +23,7 @@ namespace YT_Master
             {
                 Console.WriteLine("\n\n---Here we are again xD---\n\n");
 
-                Task.Factory.StartNew(() => new SlaveLink().Watch());
+                //Task.Factory.StartNew(() => new SlaveLink().Watch());
                 Task.Factory.StartNew(() => new SlaveList().Watch());
             }
             catch (Exception exx)

@@ -50,6 +50,7 @@ namespace YT_Master
             watcher = new FirefoxWatcher();
             watcher.Navigate(url_error);
             watcher.ClickButton_ZgadzamSie();
+            watcher.ClickButton_PersonalizacjaCookies();
         }
     }
 }
