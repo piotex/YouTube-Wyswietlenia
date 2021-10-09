@@ -11,11 +11,11 @@ namespace YT_Master.v2.Firefox
 
         public void ConsolePlotError(Exception eeee, string place = "")
         {
-            Console.WriteLine("\n\n----------------------");
+            Console.WriteLine("----------------------");
             Console.WriteLine(place);
             Console.WriteLine("- - - - - -");
             Console.WriteLine(eeee.Message);
-            Console.WriteLine("----------------------\n\n");
+            Console.WriteLine("----------------------");
         }
 
         public bool Navigate(string url)

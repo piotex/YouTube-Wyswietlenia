@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Threading;
 using YT_Master.v2.Interfaces;
 
 namespace YT_Master.v2.Firefox.YoutubeSources
@@ -13,10 +11,16 @@ namespace YT_Master.v2.Firefox.YoutubeSources
             ClickConditionsAcceptation();
             ClickVideoPlay();                                       //added to be sure that video will be played
         }
-
+        
         public virtual void StartFirefox()
         {
             StartBotFirefox();
+        }
+
+        public virtual void KillFirefox()
+        {
+            driver.Close();
+            driver.Dispose();
         }
     }
 }

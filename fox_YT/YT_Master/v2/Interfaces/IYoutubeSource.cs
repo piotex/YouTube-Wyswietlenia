@@ -8,5 +8,6 @@ namespace YT_Master.v2.Interfaces
     {
         public void StartFirefox();
         public void WatchVideo();
+        public void KillFirefox();
     }
 }

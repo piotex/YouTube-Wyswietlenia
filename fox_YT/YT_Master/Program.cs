@@ -18,13 +18,9 @@ namespace YT_Master
             Console.WriteLine("\n\n---Waiting For [Enter] To Break---\n\n");
             Console.ReadLine();
         }
-
         static void start()
         {
-            ManagerFactoryYoutube manager = new ManagerFactoryYoutube();
-
-            manager.WatchVideo(EnumYoutubeSourceType.YTSearch);
-
+            new ManagerFactoryYoutube().StartWatchingVideo();
             Console.ReadLine();
         }
 
@@ -47,7 +43,7 @@ namespace YT_Master
 
 
 
-
+        /*
         static void rec_funck()
         {
             try
@@ -79,6 +75,6 @@ namespace YT_Master
                 }
             }
         }
-
+        */
     }
 }

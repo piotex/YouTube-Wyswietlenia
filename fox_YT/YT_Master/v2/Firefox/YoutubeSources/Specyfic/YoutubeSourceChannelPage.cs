@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace YT_Master.v2.Firefox.YoutubeSources.Specyfic
 {
@@ -29,7 +30,7 @@ namespace YT_Master.v2.Firefox.YoutubeSources.Specyfic
             }
             catch (Exception ee)
             {
-                ConsolePlotError(ee, "YoutubeSourceChannelPage : ClickVideo()");
+                //ConsolePlotError(ee, "YoutubeSourceChannelPage : ClickVideo()");
                 return false;
             }
             return true;
