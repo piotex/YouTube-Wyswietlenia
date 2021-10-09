@@ -5,6 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using YT_Master.v2.Factory;
 
 namespace YT_Master
 {
@@ -12,10 +13,20 @@ namespace YT_Master
     {
         static void Main(string[] args)
         {
-            rec_funck();
+            //rec_funck();
+            start();
             Console.WriteLine("\n\n---Waiting For [Enter] To Break---\n\n");
             Console.ReadLine();
         }
+
+        static void start()
+        {
+            ManagerFactoryYoutube manager = new ManagerFactoryYoutube();
+            manager.WatchVideo(EnumYoutubeSourceType.Direct);
+
+            Console.ReadLine();
+        }
+
 
         static void rec_funck()
         {

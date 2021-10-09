@@ -8,7 +8,7 @@ namespace YT_Master.v2.Factory
 {
     public class ManagerFactoryYoutube
     {
-        public Dictionary<EnumYoutubeSourceType, IYoutubeSource> ytSources = new Dictionary<EnumYoutubeSourceType, IYoutubeSource>() 
+        private Dictionary<EnumYoutubeSourceType, IYoutubeSource> ytSources = new Dictionary<EnumYoutubeSourceType, IYoutubeSource>() 
         {
             { EnumYoutubeSourceType.Direct, new YoutubeSourceDirect() },
         };
