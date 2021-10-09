@@ -6,6 +6,7 @@ namespace YT_Master.v2.Interfaces
 {
     public interface IYoutubeSource
     {
+        public void StartFirefox();
         public void WatchVideo();
     }
 }

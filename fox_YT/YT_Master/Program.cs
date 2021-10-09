@@ -22,10 +22,30 @@ namespace YT_Master
         static void start()
         {
             ManagerFactoryYoutube manager = new ManagerFactoryYoutube();
-            manager.WatchVideo(EnumYoutubeSourceType.Direct);
+
+            manager.WatchVideo(EnumYoutubeSourceType.Search);
 
             Console.ReadLine();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         static void rec_funck()

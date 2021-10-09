@@ -11,10 +11,14 @@ namespace YT_Master.v2.Factory
         private Dictionary<EnumYoutubeSourceType, IYoutubeSource> ytSources = new Dictionary<EnumYoutubeSourceType, IYoutubeSource>() 
         {
             { EnumYoutubeSourceType.Direct, new YoutubeSourceDirect() },
+            { EnumYoutubeSourceType.Facebook, new YoutubeSourceFacebook() },
+            { EnumYoutubeSourceType.Google, new YoutubeSourceGoogle() },
+            { EnumYoutubeSourceType.Search, new YoutubeSourceSearch() },
         };
 
         public void WatchVideo(EnumYoutubeSourceType source)
         {
+            ytSources[source].StartFirefox();
             ytSources[source].WatchVideo();
         }
     }
