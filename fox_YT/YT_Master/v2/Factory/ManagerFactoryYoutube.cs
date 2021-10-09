@@ -29,14 +29,17 @@ namespace YT_Master.v2.Factory
         }
         public void WatchVideo(EnumYoutubeSourceType source)
         {
-            int sleepTime = getSleepTime();
-            IYoutubeSource isource = getNewIYoutubeSource(source);
-            Console.WriteLine(Thread.CurrentThread.Name + " _sleep_: " + sleepTime/1000 + "s");
+            while (true)
+            {
+                int sleepTime = getSleepTime();
+                IYoutubeSource isource = getNewIYoutubeSource(source);
+                Console.WriteLine(Thread.CurrentThread.Name + " _sleep_: " + sleepTime / 1000 + "s");
 
-            isource.StartFirefox();
-            isource.WatchVideo();
-            Thread.Sleep(sleepTime);
-            isource.KillFirefox();
+                isource.StartFirefox();
+                isource.WatchVideo();
+                Thread.Sleep(sleepTime);
+                isource.KillFirefox();
+            }
         }
         
 

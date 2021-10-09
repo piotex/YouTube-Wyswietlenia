@@ -63,7 +63,7 @@ namespace YT_Master.v2.Firefox
             }
             catch (Exception ee)
             {
-                ConsolePlotError(ee, "YoutubeGeneralOperationsFirefoxBot : ClickVideoPlay()");
+                //ConsolePlotError(ee, "YoutubeGeneralOperationsFirefoxBot : ClickVideoPlay()");
                 return false;
             }
             return true;
