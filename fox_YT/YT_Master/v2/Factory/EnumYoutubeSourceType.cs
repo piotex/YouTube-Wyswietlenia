@@ -9,6 +9,7 @@ namespace YT_Master.v2.Factory
         Direct,
         Facebook,
         Google,
-        Search,
+        ChannelPage,
+        YTSearch,
     }
 }

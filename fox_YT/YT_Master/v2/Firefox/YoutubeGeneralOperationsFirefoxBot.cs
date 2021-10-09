@@ -33,7 +33,7 @@ namespace YT_Master.v2.Firefox
             }
             return true;
         }
-        public bool ClickConditionsAcceptation()
+        public virtual bool ClickConditionsAcceptation()
         {
             try
             {

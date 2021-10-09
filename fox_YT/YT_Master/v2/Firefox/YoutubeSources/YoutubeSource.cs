@@ -7,14 +7,14 @@ namespace YT_Master.v2.Firefox.YoutubeSources
 {
     public class YoutubeSource : YoutubeGeneralOperationsFirefoxBot, IYoutubeSource
     {
-        public void WatchVideo()
+        public virtual void WatchVideo()
         {
             Navigate(Url);
             ClickConditionsAcceptation();
             ClickVideoPlay();                                       //added to be sure that video will be played
         }
 
-        public void StartFirefox()
+        public virtual void StartFirefox()
         {
             StartBotFirefox();
         }

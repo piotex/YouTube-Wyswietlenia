@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using YT_Master.v2.Firefox.YoutubeSources;
+using YT_Master.v2.Firefox.YoutubeSources.Specyfic;
 using YT_Master.v2.Interfaces;
 
 namespace YT_Master.v2.Factory
@@ -13,7 +14,8 @@ namespace YT_Master.v2.Factory
             { EnumYoutubeSourceType.Direct, new YoutubeSourceDirect() },
             { EnumYoutubeSourceType.Facebook, new YoutubeSourceFacebook() },
             { EnumYoutubeSourceType.Google, new YoutubeSourceGoogle() },
-            { EnumYoutubeSourceType.Search, new YoutubeSourceSearch() },
+            { EnumYoutubeSourceType.YTSearch, new YoutubeSourceYTSearch() },
+            { EnumYoutubeSourceType.ChannelPage, new YoutubeSourceChannelPage() },
         };
 
         public void WatchVideo(EnumYoutubeSourceType source)

@@ -23,7 +23,7 @@ namespace YT_Master
         {
             ManagerFactoryYoutube manager = new ManagerFactoryYoutube();
 
-            manager.WatchVideo(EnumYoutubeSourceType.Search);
+            manager.WatchVideo(EnumYoutubeSourceType.YTSearch);
 
             Console.ReadLine();
         }
