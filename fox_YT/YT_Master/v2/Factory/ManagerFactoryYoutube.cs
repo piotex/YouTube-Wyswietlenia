@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using YT_Master.v2.Firefox.YoutubeSources;
@@ -15,16 +16,7 @@ namespace YT_Master.v2.Factory
         public ManagerFactoryYoutube()
         {
             index = 0;
-            watchingTimes = new List<int>
-            {
-                110,
-                115,
-                13,
-                112,
-                130,
-                144,
-                122
-            };
+            watchingTimes = getWatchTimeList(@"..\..\..\..\YT_Master\Files\WatchingTimes.txt");
         }
         public void StartWatchingVideo()
         {
@@ -77,6 +69,14 @@ namespace YT_Master.v2.Factory
                 default:
                     return new YoutubeSourceYTSearch();
             }
+        }
+        private List<int> getWatchTimeList(string path)
+        {
+            string tmp1 = System.IO.File.ReadAllText(path);
+            string[] tmp2 = tmp1.Split("\r\n");
+            List<string> tmp3 = new List<string>(tmp2);
+            tmp3.RemoveAt(tmp3.Count-1);
+            return tmp3.Select(s => int.Parse(s)).ToList();
         }
     }
 }
