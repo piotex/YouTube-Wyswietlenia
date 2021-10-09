@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -11,19 +12,19 @@ namespace YT_Master.v2.Firefox
         public void ConsolePlotError(Exception eeee, string place = "")
         {
             Console.WriteLine("\n\n----------------------");
+            Console.WriteLine(place);
+            Console.WriteLine("- - - - - -");
             Console.WriteLine(eeee.Message);
             Console.WriteLine("----------------------\n\n");
         }
 
         public bool Navigate(string url)
         {
-            double wait_time = 5;
             try
             {
                 driver.Navigate().GoToUrl(url);
-                Thread.Sleep(500);                                                                                          //wprowadzilem male opuznienie zeby miec pewnosc zaladowania sie okna z komunikatem o zgodzie na Cookies 
                                                                                                                             //TODO - check that page is ready - stackowerflow search!
-                //driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(wait_time);
+                //Utils.UtilsOP.SaveToTmpFile(ref driver.FindElement(By.TagName("body")).GetAttribute("innerHTML"));
             }
             catch (Exception ee)
             {
@@ -32,5 +33,44 @@ namespace YT_Master.v2.Firefox
             }
             return true;
         }
+        public bool ClickConditionsAcceptation()
+        {
+            try
+            {
+                System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> objcts = driver.FindElementsById("button");
+                for (int i = objcts.Count - 1; i >= 0; i--)
+                {
+                    if (objcts[i].Text == "ZGADZAM SIĘ")
+                    {
+                        objcts[i].Click();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ee)
+            {
+                ConsolePlotError(ee, "YoutubeGeneralOperationsFirefoxBot : ClickConditionsAcceptation()");
+                return false;
+            }
+            return true;
+        }
+        public bool ClickVideoPlay()
+        {
+            try
+            {
+                System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> objcts = driver.FindElementsByClassName("ytp-large-play-button");
+                objcts[0].Click();
+            }
+            catch (Exception ee)
+            {
+                ConsolePlotError(ee, "YoutubeGeneralOperationsFirefoxBot : ClickVideoPlay()");
+                return false;
+            }
+            return true;
+        }
+
+
+
+
     }
 }

@@ -1,0 +1,11 @@
+﻿
+		<ytd-button-renderer class="style-scope ytd-consent-bump-v2-lightbox style-primary size-default" use-keyboard-focused="" button-renderer="true" is-paper-button="">
+			<a class="yt-simple-endpoint style-scope ytd-button-renderer" tabindex="-1">
+				<tp-yt-paper-button id="button" class="style-scope ytd-button-renderer style-primary size-default" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false" aria-label="Zgadzasz się na wykorzystanie plików cookie i&nbsp;innych danych do opisanych celów">
+				<!--css-build:shady-->
+					<yt-formatted-string id="text" class="style-scope ytd-button-renderer style-primary size-default">
+						Zgadzam się
+					</yt-formatted-string>
+				</tp-yt-paper-button>
+			</a>
+		</ytd-button-renderer>
