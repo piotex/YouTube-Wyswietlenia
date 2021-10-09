@@ -22,7 +22,9 @@ namespace YT_Master.v2.Firefox
         }
         protected string GetUrl(string path = @"..\..\..\..\YT_Master\Files\Links\Outside\YouTubeVideoDirectLink.txt")
         {
-            return System.IO.File.ReadAllText(path);
+            var tmp1 = System.IO.File.ReadAllText(path);
+            var tmp2 = tmp1.Split("\r\n");
+            return tmp2[0];
         }
     }
 }
