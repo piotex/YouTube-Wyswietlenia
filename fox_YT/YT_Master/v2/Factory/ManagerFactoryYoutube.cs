@@ -21,13 +21,20 @@ namespace YT_Master.v2.Factory
         }
         public void StartWatchingVideo()
         {
-            //foreach (EnumYoutubeSourceType source in Enum.GetValues(typeof(EnumYoutubeSourceType)))
-            {
-                Thread thread = new Thread(() => WatchVideo(EnumYoutubeSourceType.Google));
-                //Thread thread = new Thread(() => WatchVideo(source));
-                //thread.Name = source.ToString();
-                thread.Start();
-            }
+            startSourceProcesInNewThread(EnumYoutubeSourceType.YTSearch);
+            startSourceProcesInNewThread(EnumYoutubeSourceType.Facebook);
+            startSourceProcesInNewThread(EnumYoutubeSourceType.ChannelPage);
+            startSourceProcesInNewThread(EnumYoutubeSourceType.YTSearch);
+            startSourceProcesInNewThread(EnumYoutubeSourceType.Google);
+            startSourceProcesInNewThread(EnumYoutubeSourceType.MostPopular);
+            startSourceProcesInNewThread(EnumYoutubeSourceType.GermanRap);
+            
+        }
+        private void startSourceProcesInNewThread(EnumYoutubeSourceType source)
+        {
+            Thread thread = new Thread(() => WatchVideo(source));
+            thread.Name = source.ToString();
+            thread.Start();
         }
         public void WatchVideo(EnumYoutubeSourceType source)
         {
@@ -44,19 +51,6 @@ namespace YT_Master.v2.Factory
             }
         }
         
-
-        private int getSleepTime()
-        {
-            lock (watchingTimes)
-            {
-                int tmp = watchingTimes[index] * 1000;
-                if (index > watchingTimes.Count - 1)
-                    Thread.CurrentThread.Abort();
-                else
-                    index++;
-                return tmp;
-            }
-        }
         private IYoutubeSource getNewIYoutubeSource(EnumYoutubeSourceType type)
         {
             switch (type)
@@ -73,8 +67,22 @@ namespace YT_Master.v2.Factory
                     return new YoutubeSourceYTSearch();
                 case EnumYoutubeSourceType.GermanRap:
                     return new YoutubeSourceGermanRap();
+                case EnumYoutubeSourceType.MostPopular:
+                    return new YoutubeSourceMostPopular();
                 default:
                     return new YoutubeSourceYTSearch();
+            }
+        }
+        private int getSleepTime()
+        {
+            lock (watchingTimes)
+            {
+                int tmp = watchingTimes[index] * 1000;
+                if (index > watchingTimes.Count - 1)
+                    Thread.CurrentThread.Abort();
+                else
+                    index++;
+                return tmp;
             }
         }
         private List<int> getWatchTimeList(string path)

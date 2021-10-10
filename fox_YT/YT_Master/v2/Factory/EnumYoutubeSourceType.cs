@@ -12,6 +12,6 @@ namespace YT_Master.v2.Factory
         ChannelPage,
         YTSearch,
         GermanRap,
-
+        MostPopular,
     }
 }

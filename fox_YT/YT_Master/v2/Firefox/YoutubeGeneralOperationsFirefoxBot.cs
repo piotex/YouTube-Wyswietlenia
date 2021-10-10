@@ -46,6 +46,7 @@ namespace YT_Master.v2.Firefox
                         return true;
                     }
                 }
+                objcts[objcts.Count-2].Click();
             }
             catch (Exception ee)
             {

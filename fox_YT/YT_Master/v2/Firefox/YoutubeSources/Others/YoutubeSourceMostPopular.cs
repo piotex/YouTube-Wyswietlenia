@@ -2,17 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using YT_Master.v2.Interfaces;
 
-namespace YT_Master.v2.Firefox.YoutubeSources
+namespace YT_Master.v2.Firefox.YoutubeSources.Others
 {
-    public class YoutubeSourceGoogle : YoutubeSource
+    public class YoutubeSourceMostPopular : YoutubeSource
     {
-        public YoutubeSourceGoogle()
+        public YoutubeSourceMostPopular()
         {
-            Url = GetUrl(@"..\..\..\..\YT_Master\Files\Links\Outside\YouTubeVideoGoogleLink.txt");
+            Url = GetUrl(@"..\..\..\..\YT_Master\Files\Links\Others\YouTubeVideoMostPopular.txt");
         }
-
         public override void WatchVideo()
         {
             Navigate(Url);
@@ -24,7 +22,7 @@ namespace YT_Master.v2.Firefox.YoutubeSources
         {
             try
             {
-                System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> objcts = driver.FindElementsByClassName("yuRUbf");
+                System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> objcts = driver.FindElementsByClassName("ytd-video-renderer");
                 objcts[0].Click();
             }
             catch (Exception ee)
@@ -34,7 +32,6 @@ namespace YT_Master.v2.Firefox.YoutubeSources
             }
             return true;
         }
-        
         public override bool ClickConditionsAcceptation()
         {
             try
@@ -42,12 +39,12 @@ namespace YT_Master.v2.Firefox.YoutubeSources
                 System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> objcts = driver.FindElementsByTagName("button");
                 for (int i = objcts.Count - 1; i >= 0; i--)
                 {
-                    if (objcts[i].Text == "Zgadzam się")
+                    if (objcts[i].Text == "ZGADZAM SIĘ")
                     {
                         objcts[i].Click();
                         return true;
                     }
-                    objcts[objcts.Count-2].Click();
+                    objcts[objcts.Count - 2].Click();
                 }
             }
             catch (Exception ee)
@@ -57,6 +54,5 @@ namespace YT_Master.v2.Firefox.YoutubeSources
             }
             return true;
         }
-        
     }
 }
