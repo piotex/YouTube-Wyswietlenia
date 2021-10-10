@@ -11,5 +11,7 @@ namespace YT_Master.v2.Factory
         Google,
         ChannelPage,
         YTSearch,
+        GermanRap,
+
     }
 }

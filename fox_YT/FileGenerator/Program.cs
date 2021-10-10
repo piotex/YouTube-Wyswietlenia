@@ -10,6 +10,8 @@ namespace FileGenerator
         static void Main(string[] args)
         {
             long sum = 0;
+            long sum_time = 0;
+
             int x_seconds = average_watch_time;
             List<int> y_watchTime = getWatchTime(x_seconds);
             List<int> finalValues = new List<int>();
@@ -19,11 +21,12 @@ namespace FileGenerator
                 sum += y_watchTime[i];
                 for (int j = 0; j < y_watchTime[i]; j++)
                 {
-                    int time = i;
+                    int time = Add_Corection_To_Function(i);
                     if (time == 0)
                     {
                         time =1;
                     }
+                    sum_time += time;
                     finalValues.Add(time);
                 }
             }
@@ -43,6 +46,7 @@ namespace FileGenerator
                     writer.WriteLine(finalValues[i]);
                 }
             }
+            Console.WriteLine("Czas Wyswietlen: " + sum_time + "[s] = " + sum_time/60 + "[min] = " + sum_time/60/60 + "[h] = " + sum_time/60/60/24 + "[days]");
             Console.WriteLine("Suma Wyswietlen: " + sum);
 
 
@@ -86,7 +90,13 @@ namespace FileGenerator
         }
         static int Add_White_Noise_To_Function(int y)
         {
-            return y + (new Random().Next(0,5));
+            return y + (new Random().Next(0, 5));
+        }
+        static int Add_Corection_To_Function(int y)
+        {
+            int minLevelOfCorrection = 10; //[s]
+            int maxLevelOfCorrection = 30; //[s]
+            return y + new Random().Next(minLevelOfCorrection,maxLevelOfCorrection);
         }
         static int getValueOfBaseFunction(int x)
         {

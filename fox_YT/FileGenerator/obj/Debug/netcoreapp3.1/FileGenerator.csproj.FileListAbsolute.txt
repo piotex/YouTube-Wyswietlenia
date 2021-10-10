@@ -10,4 +10,4 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\YouTubeMaster\fox_YT\FileGenerator\obj\
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\YouTubeMaster\fox_YT\FileGenerator\obj\Debug\netcoreapp3.1\FileGenerator.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\YouTubeMaster\fox_YT\FileGenerator\obj\Debug\netcoreapp3.1\FileGenerator.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\YouTubeMaster\fox_YT\FileGenerator\obj\Debug\netcoreapp3.1\FileGenerator.genruntimeconfig.cache
-C:\Users\pkubo\OneDrive\Dokumenty\GitHub\YouTubeMaster\fox_YT\FileGenerator\obj\Debug\netcoreapp3.1\FileGenerator.csprojAssemblyReference.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\YouTubeMaster\fox_YT\FileGenerator\obj\Debug\netcoreapp3.1\FileGenerator.csproj.AssemblyReference.cache

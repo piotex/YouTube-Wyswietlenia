@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using YT_Master.v2.Firefox.YoutubeSources;
+using YT_Master.v2.Firefox.YoutubeSources.Others;
 using YT_Master.v2.Firefox.YoutubeSources.Specyfic;
 using YT_Master.v2.Interfaces;
 
@@ -20,10 +21,11 @@ namespace YT_Master.v2.Factory
         }
         public void StartWatchingVideo()
         {
-            foreach (EnumYoutubeSourceType source in Enum.GetValues(typeof(EnumYoutubeSourceType)))
+            //foreach (EnumYoutubeSourceType source in Enum.GetValues(typeof(EnumYoutubeSourceType)))
             {
-                Thread thread = new Thread(() => WatchVideo(source));
-                thread.Name = source.ToString();
+                Thread thread = new Thread(() => WatchVideo(EnumYoutubeSourceType.Google));
+                //Thread thread = new Thread(() => WatchVideo(source));
+                //thread.Name = source.ToString();
                 thread.Start();
             }
         }
@@ -69,6 +71,8 @@ namespace YT_Master.v2.Factory
                     return new YoutubeSourceGoogle();
                 case EnumYoutubeSourceType.YTSearch:
                     return new YoutubeSourceYTSearch();
+                case EnumYoutubeSourceType.GermanRap:
+                    return new YoutubeSourceGermanRap();
                 default:
                     return new YoutubeSourceYTSearch();
             }
